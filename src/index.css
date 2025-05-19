@@ -1,0 +1,194 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  --radius: 0.625rem;
+  /* Cor de fundo: #F5F3F7 (cinza claro) */
+  --background: 257 20% 96%; /* oklch(0.96 0.02 257) approx #F5F3F7 */
+  --foreground: 240 60% 10%; /* Cor de texto padrão, escura para contraste */
+  
+  --card: 257 20% 96%;
+  --card-foreground: 240 60% 10%;
+  
+  --popover: 257 20% 96%;
+  --popover-foreground: 240 60% 10%;
+  
+  /* Cor primária: #7957D6 (violeta profundo) */
+  --primary: 260 60% 60%; /* oklch(0.6 0.15 260) approx #7957D6 */
+  --primary-foreground: 260 100% 98%; /* Branco ou cor clara para texto sobre primário */
+  
+  --secondary: 260 20% 90%; /* Um roxo mais claro para secundário */
+  --secondary-foreground: 260 60% 30%;
+  
+  --muted: 260 20% 94%;
+  --muted-foreground: 260 10% 45%;
+  
+  /* Acentos e interações: #A78BFA (roxo elétrico) */
+  --accent: 258 80% 75%; /* oklch(0.75 0.12 258) approx #A78BFA */
+  --accent-foreground: 260 60% 20%; /* Cor escura para texto sobre acento */
+  
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 260 20% 88%;
+  --input: 260 20% 92%;
+  --ring: 260 60% 60%; /* Usando a cor primária para o anel de foco */
+
+  --chart-1: var(--primary);
+  --chart-2: var(--accent);
+  --chart-3: oklch(0.6 0.118 184.704);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+
+  --sidebar: var(--background);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+.dark {
+  --background: 260 15% 10%; /* Um roxo bem escuro para o fundo */
+  --foreground: 260 20% 95%; /* Texto claro para contraste */
+
+  --card: 260 15% 12%;
+  --card-foreground: 260 20% 95%;
+
+  --popover: 260 15% 10%;
+  --popover-foreground: 260 20% 95%;
+
+  --primary: 260 70% 70%; /* #7957D6 um pouco mais claro no modo escuro */
+  --primary-foreground: 260 10% 10%; /* Texto escuro sobre primário */
+
+  --secondary: 260 20% 20%;
+  --secondary-foreground: 260 20% 95%;
+
+  --muted: 260 15% 20%;
+  --muted-foreground: 260 10% 65%;
+
+  --accent: 258 80% 80%; /* #A78BFA um pouco mais claro no modo escuro */
+  --accent-foreground: 260 10% 10%; /* Texto escuro sobre acento */
+
+  --destructive: 0 70% 50%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 260 10% 25%;
+  --input: 260 10% 22%;
+  --ring: 260 70% 70%; /* Usando a cor primária para o anel de foco */
+  
+  --chart-1: var(--primary);
+  --chart-2: var(--accent);
+  --chart-3: oklch(0.696 0.17 162.48);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+
+  --sidebar: var(--background);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+}
+
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif; /* Exemplo de fonte sans-serif moderna */
+  }
+  /* Adiciona Inter via Google Fonts se não estiver localmente */
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+}
+
+/* Estilos para ReactFlow */
+.react-flow__pane {
+  background-color: hsl(var(--card));
+}
+.react-flow__node {
+  background-color: hsl(var(--popover));
+  color: hsl(var(--popover-foreground));
+  border-color: hsl(var(--border));
+  border-radius: var(--radius-md);
+  padding: 10px 15px;
+  font-size: 12px;
+  text-align: center;
+}
+.react-flow__node.selected, .react-flow__node:hover {
+  box-shadow: 0 0 0 2px hsl(var(--primary)), 0 0 10px hsl(var(--primary) / 0.5);
+}
+.react-flow__edge-path {
+  stroke: hsl(var(--accent));
+  stroke-width: 2;
+}
+.react-flow__handle {
+  background-color: hsl(var(--primary));
+  border-color: hsl(var(--background));
+  width: 8px;
+  height: 8px;
+}
+.react-flow__controls button {
+  background-color: hsl(var(--popover));
+  color: hsl(var(--popover-foreground));
+  border-color: hsl(var(--border));
+}
+.react-flow__controls button:hover {
+  background-color: hsl(var(--accent));
+  color: hsl(var(--accent-foreground));
+}
+.react-flow__minimap {
+  background-color: hsl(var(--card));
+  border-color: hsl(var(--border));
+}
+.react-flow__attribution {
+  background-color: hsl(var(--background) / 0.7);
+  padding: 2px 4px;
+  font-size: 10px;
+}

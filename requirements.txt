@@ -1,0 +1,10 @@
+Flask>=2.0
+Flask-CORS>=3.0
+# As seguintes dependências provavelmente não funcionarão no WebContainer
+# pyautogen>=0.2.0 
+# crewai>=0.28.0
+# crewai-tools>=0.1.0
+# langgraph>=0.0.30
+# langchain_openai  # ou outro provedor LLM para LangGraph/CrewAI
+# python-dotenv
+# requests
